@@ -1,23 +1,27 @@
 # Momentarium
 
-**Turn a collection of photos into an exhibition you can step inside.**
+**Give your photos a place to live.**
 
-Momentarium is a personal memory archive and exhibition builder. Start with a set of photos, shape them into chapters with an AI curator, and create a 3D environment inspired by their mood. Publish the result as a link that visitors can open without an account.
+What if a photo album opened onto a foggy coast? You could orbit the shoreline, open a chapter, and discover the memories behind the photographs.
 
-[Run the demo](#run-locally) · [Explore the architecture](#architecture) · [Run the tests](#tests)
+Momentarium turns photo collections into interactive 3D exhibitions. Curate the story with AI assistance, invite others to add their photos and memories, and share the finished exhibition through a link anyone can open.
+
+[Try the local demo](#run-locally) · [See how it's built](#architecture) · [Run the tests](#tests)
 
 ![The published Momentarium exhibition, with a foggy 3D coast and a sidebar of photo chapters](docs/media/public-exhibition.webp)
 
-*The public viewer running locally in fake mode with synthetic demo images. The application interface is in Chinese.*
+*The sample exhibition pairs a foggy 3D coast with photo chapters. The demo uses synthetic photos and a Chinese-language interface.*
 
-## From photos to an exhibition
+## From camera roll to opening day
 
-- **Curate the story.** AI suggests themes, chapters, and captions. The curator can edit, reorder, and approve the changes before saving them.
-- **Build a place for the story.** Three.js creates an explorable environment around the collection's mood. Visitors can orbit the scene and open photos, captions, and memories from the chapter sidebar.
-- **Invite another perspective.** Invitees can submit a photo and a memory. The curator decides what enters the draft and which locations visitors can see.
-- **Publish a version.** Each publication freezes the exhibition, photos, and selected scene in a read-only snapshot. The draft stays editable for the next publication.
+- **Find the story in the photos.** Ask AI to suggest themes, chapters, and captions. Refine the wording and sequence in the curator workspace.
+- **Give the story a setting.** Build a Three.js scene around the collection's mood. Visitors can orbit the scene and open photos, captions, and memories from the chapter sidebar.
+- **Make room for other memories.** Invite someone to contribute a photo and a memory. Choose what to include and which map locations visitors can see.
+- **Open the exhibition.** Publish a read-only edition of the photos, chapters, and selected scene. Visitors can open the link without an account while you keep working on the next edition.
 
 ![The curator workspace showing chapter editing and AI suggestions for the synthetic exhibition](docs/media/curator-workspace.webp)
+
+*In the curator workspace, AI suggestions sit alongside the editable chapters.*
 
 ## Run locally
 
