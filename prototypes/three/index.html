@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Momentarium · SceneRuntime 沙箱原型</title>
+    <style>
+      /* Dev harness only (prototypes/three). Product UI is Tailwind in frontend/. */
+      :root {
+        color-scheme: dark;
+        --bg: #0b0e11;
+        --panel: #12171c;
+        --line: #232c34;
+        --text: #dbe4ea;
+        --muted: #8696a3;
+        --accent: #7fb3d0;
+        --ok: #69c08b;
+        --err: #e07070;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font: 13px/1.5 "Cascadia Mono", Consolas, "Segoe UI", monospace;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 10px 16px;
+        border-bottom: 1px solid var(--line);
+        background: var(--panel);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+      header .tag {
+        color: var(--muted);
+        font-weight: 400;
+      }
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      button {
+        font: inherit;
+        color: #0b0e11;
+        background: var(--accent);
+        border: 0;
+        border-radius: 4px;
+        padding: 6px 14px;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      #phase-badge {
+        padding: 2px 8px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      #phase-badge.ready {
+        color: var(--ok);
+        border-color: var(--ok);
+      }
+      #phase-badge.failed {
+        color: var(--err);
+        border-color: var(--err);
+      }
+      main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 440px;
+        min-height: 0;
+      }
+      .stage-column {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        min-height: 0;
+        border-right: 1px solid var(--line);
+      }
+      .stage {
+        position: relative;
+        flex: none;
+        aspect-ratio: 16 / 10;
+        width: 100%;
+        background: #080d12;
+        display: flex;
+      }
+      .stage iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+      .stage-hint {
+        margin: auto;
+        color: var(--muted);
+        text-align: center;
+        padding: 24px;
+        max-width: 520px;
+      }
+      .capture-strip {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--line);
+        border-top: 1px solid var(--line);
+      }
+      .capture-strip figure {
+        margin: 0;
+        background: var(--panel);
+        padding: 8px;
+      }
+      .capture-strip img {
+        width: 100%;
+        display: block;
+        border: 1px solid var(--line);
+      }
+      .capture-strip figcaption {
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 6px;
+      }
+      .inspector {
+        overflow: auto;
+        min-height: 0;
+      }
+      .inspector section {
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--line);
+      }
+      .inspector h2 {
+        margin: 0 0 8px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .inspector pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        font-size: 12px;
+      }
+      #photo-report {
+        white-space: pre-line;
+        font-size: 12px;
+      }
+      #protocol-log {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-height: 220px;
+        overflow: auto;
+        font-size: 11.5px;
+      }
+      #protocol-log li {
+        padding: 2px 0;
+        border-bottom: 1px dashed #1b232a;
+        color: var(--muted);
+      }
+      #protocol-log b {
+        color: var(--text);
+        font-weight: 500;
+      }
+      #error-list {
+        margin: 0;
+        padding-left: 16px;
+        color: var(--err);
+        font-size: 12px;
+      }
+      #selection {
+        color: var(--ok);
+        font-size: 12px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Momentarium · SceneRuntime 沙箱原型 <span class="tag">three@0.152.2 · runtimeVersion 1</span></h1>
+      <div class="actions">
+        <span id="phase-badge">idle</span>
+        <button id="run-button" type="button">运行原型</button>
+      </div>
+    </header>
+    <main>
+      <div class="stage-column">
+        <div class="stage" id="stage">
+          <div class="stage-hint" id="stage-hint">
+            点击“运行原型”：加载本地照片 → 内联 three 与 SceneRuntime → 在 sandbox="allow-scripts"
+            的 iframe 中执行 build(ctx) → 采集 2 个视角截图与运行时证据。
+          </div>
+        </div>
+        <div class="capture-strip" id="capture-strip" hidden></div>
+      </div>
+      <aside class="inspector">
+        <section><h2>照片</h2><div id="photo-report" class="muted">未加载</div></section>
+        <section><h2>运行时统计</h2><pre id="runtime-report">—</pre></section>
+        <section><h2>照片点击回传</h2><div id="selection" class="muted">在 3D 画面中点击照片，应回传 photoId。</div></section>
+        <section><h2>协议日志</h2><ol id="protocol-log"></ol></section>
+        <section><h2>错误</h2><ul id="error-list"></ul></section>
+      </aside>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

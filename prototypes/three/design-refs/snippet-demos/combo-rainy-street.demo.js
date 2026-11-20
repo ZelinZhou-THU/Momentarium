@@ -1,0 +1,24 @@
+// 组合：雨夜街角（wet-street + street-building + street-lamp）。
+scene.background = new THREE.Color(0x22313b);
+scene.fog = new THREE.FogExp2(0x22313b, 0.024);
+addLightRig(THREE, scene, { keyColor: 0xffb070, keyIntensity: 0.6, keyPosition: [5, 4, 6], ambientColor: 0x51677a, ambientIntensity: 0.95, rimIntensity: 1.25, rimPosition: [5, 4, -7] });
+const neonLight = new THREE.PointLight(0xff5d8f, 7, 9, 2);
+neonLight.position.set(-3.0, 2.8, -1.2);
+scene.add(neonLight);
+const glowTexture = makeGlowTexture(THREE);
+const street = makeWetStreet(THREE);
+street.group.position.set(0, 0, 2);
+scene.add(street.group);
+const building = makeStreetBuilding(THREE, glowTexture);
+building.position.set(-2.7, 0, -0.4);
+building.rotation.y = 0.06;
+scene.add(building);
+const lamp = makeStreetLamp(THREE, glowTexture);
+lamp.group.position.set(4.6, 0, 1.2);
+scene.add(lamp.group);
+const rain = makeRain(THREE);
+scene.add(rain.lines);
+camera.fov = 52; camera.position.set(2.4, 1.92, 8.2); camera.lookAt(-0.8, 1.45, -1.2); camera.updateProjectionMatrix();
+let elapsed = 0;
+ctx.onFrame((delta) => { elapsed += delta; street.update(elapsed, ctx.renderer, scene); rain.update(elapsed); lamp.update(elapsed); });
+ctx.addOrbitControls({ target: [-0.8, 1.6, -0.6], minDistance: 5, maxDistance: 20 });

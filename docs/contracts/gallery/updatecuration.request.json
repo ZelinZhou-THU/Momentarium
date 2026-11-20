@@ -1,0 +1,31 @@
+{
+  "exhibitionId": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+  "title": "雨中的济州",
+  "narrative": "把海边与街巷分作两章，留住这场雨。",
+  "groups": [
+    {
+      "title": "海边的雨",
+      "narrative": "礁石与浪花，风车在远处。",
+      "photos": [
+        {
+          "photoId": "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d",
+          "caption": "悬崖下的碧绿海水。"
+        },
+        {
+          "photoId": "1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d",
+          "caption": "防波堤上的红灯塔。"
+        }
+      ]
+    },
+    {
+      "title": "街巷与咖啡",
+      "narrative": "雨后的街和一杯热咖啡。",
+      "photos": [
+        {
+          "photoId": "2a3b4c5d-6e7f-4081-92a3-b4c5d6e7f809",
+          "caption": "等车的人望着街对面。"
+        }
+      ]
+    }
+  ]
+}

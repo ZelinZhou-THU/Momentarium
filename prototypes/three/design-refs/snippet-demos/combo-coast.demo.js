@@ -1,0 +1,28 @@
+// 组合：雾中海岸（water + lighthouse + cottage + terrain 的岩石）。
+scene.fog = new THREE.FogExp2(0x9fb2ba, 0.03);
+scene.add(makeSkyDome(THREE, { top: 0x5d7d92, horizon: 0xe2c9a6 }));
+addLightRig(THREE, scene, { keyIntensity: 2.25, ambientColor: 0x9fb7c2, ambientIntensity: 1.0 });
+const glowTexture = makeGlowTexture(THREE);
+const water = makeReadableWater(THREE);
+water.group.position.set(0, 0.06, -1.2);
+scene.add(water.group);
+const terrace = new THREE.Mesh(new THREE.CylinderGeometry(3.4, 4.0, 0.75, 9, 1), makeMaterial(THREE, 0x536366, 0.95, 0.03));
+terrace.position.set(-6.2, 0.35, -3.2);
+terrace.scale.set(1.35, 1, 0.9);
+scene.add(terrace);
+const lighthouse = makeLighthouse(THREE, glowTexture);
+lighthouse.group.position.set(-6.2, 0.72, -3.2);
+scene.add(lighthouse.group);
+const plinth = new THREE.Mesh(new THREE.CylinderGeometry(3.0, 3.4, 0.75, 9, 1), makeMaterial(THREE, 0x6d7d80, 0.92, 0.04));
+plinth.position.set(4.5, 0.35, -2.35);
+scene.add(plinth);
+const house = makeCottage(THREE, glowTexture);
+house.position.set(4.5, 0.72, -2.35);
+house.rotation.y = -0.32;
+scene.add(house);
+scene.add(makeRockCluster(THREE, { center: [-3.4, 0, 4.4], count: 4, size: 0.8 }));
+scene.add(makeRockCluster(THREE, { center: [7.5, 0, 1.5], count: 4, size: 1.3, seed: 2 }));
+camera.fov = 50; camera.position.set(0, 2.55, 10.2); camera.lookAt(0, 1.45, -1.2); camera.updateProjectionMatrix();
+let elapsed = 0;
+ctx.onFrame((delta) => { elapsed += delta; water.update(elapsed, ctx.renderer, scene); lighthouse.update(elapsed); });
+ctx.addOrbitControls({ target: [0, 1.5, -1.2], minDistance: 5, maxDistance: 18 });

@@ -1,0 +1,121 @@
+@import "@fontsource/noto-serif-sc/500.css";
+@import "@fontsource/noto-serif-sc/600.css";
+@import "@fontsource/noto-sans-sc/400.css";
+@import "@fontsource/noto-sans-sc/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* 颜色 token 的默认值（胡桃木配色），值为 RGB 通道；展览相关页面由 src/theme 按场景主色覆盖。 */
+  :root {
+    --color-bg: 246 242 234;
+    --color-surface: 255 253 249;
+    --color-ink: 29 27 24;
+    --color-muted: 111 104 94;
+    --color-line: 228 221 209;
+    --color-accent: 140 90 59;
+    --color-accent-soft: 240 228 216;
+    --color-night: 58 46 38;
+  }
+
+  html {
+    @apply bg-bg text-ink;
+  }
+
+  body {
+    @apply min-h-screen text-body antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+  }
+}
+
+/*
+ * 页面与场景切换（View Transitions API，spec §11.6）。
+ * 这些伪元素只存在于切换过程中、不属于任何元素，Tailwind 类名写不到它们，所以集中写在这里：
+ * - 整页：旧画面快速渐隐、新画面渐显，沿用浏览器默认的叠加混合，交叉时不会变暗；顶栏有固定名字，
+ *   不参与整页交叉，切换时保持不动；真正的"进场"由页面内容就绪后的 Reveal 完成（异步加载的内容
+ *   在切换瞬间还不存在，整页交叉看不出变化）；
+ * - 进入/退出场景：整页向前推进（先导页放大淡出、场景由小放大淡入），退出反向，按过渡类型匹配；
+ * - 共享元素（照片、顶栏、分区底板，名字见 src/motion/transitionNames.ts）：位置与尺寸补间 450ms；
+ * - 用户要求减少动效时全部关闭（JS 侧 withViewTransition 也会直接跳过）。
+ */
+::view-transition-old(root) {
+  animation-duration: 150ms;
+}
+
+::view-transition-new(root) {
+  animation-duration: 250ms;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+::view-transition-group(*) {
+  animation-duration: 450ms;
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/*
+ * 浏览器默认让命名元素的新旧画面"宽度撑满、高度按画面自身比例"：两个状态的宽高比不同时
+ * （分区底板从窄变宽、缩略图变大图），画面会按宽度放大而高出元素本身，补间时出现多出来的一截。
+ * 统一改成铺满元素当前的框、保持比例裁切，所有共享元素的补间都只在框内发生。
+ */
+::view-transition-old(*),
+::view-transition-new(*) {
+  block-size: 100%;
+  object-fit: cover;
+}
+
+/* 分区底板是纯色圆角块：裁成圆角，缩放中的四角不会被拉变形。 */
+::view-transition-group(tab-indicator) {
+  border-radius: 8px;
+  overflow: clip;
+}
+
+:root:active-view-transition-type(scene-enter) {
+  --view-out-scale: 1.06;
+  --view-in-scale: 0.94;
+}
+
+:root:active-view-transition-type(scene-exit) {
+  --view-out-scale: 0.94;
+  --view-in-scale: 1.06;
+}
+
+:root:active-view-transition-type(scene-enter)::view-transition-old(root),
+:root:active-view-transition-type(scene-exit)::view-transition-old(root) {
+  animation: view-scale-out 400ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+:root:active-view-transition-type(scene-enter)::view-transition-new(root),
+:root:active-view-transition-type(scene-exit)::view-transition-new(root) {
+  animation: view-scale-in 500ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+@keyframes view-scale-out {
+  to {
+    opacity: 0;
+    transform: scale(var(--view-out-scale));
+  }
+}
+
+@keyframes view-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(var(--view-in-scale));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

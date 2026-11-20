@@ -1,0 +1,46 @@
+{
+  "exhibitions": [
+    {
+      "id": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+      "title": "济州岛的记忆",
+      "photoCount": 3,
+      "updatedAt": "2026-10-26T10:15:00Z",
+      "cover": {
+        "kind": "auto",
+        "imageUrl": "/api/exhibitions/0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10/cover",
+        "width": 2048,
+        "height": 1365
+      },
+      "sceneStale": false,
+      "publication": {
+        "version": 2,
+        "publishedAt": "2026-10-26T11:30:00Z"
+      },
+      "hasUnpublishedChanges": true,
+      "pendingContributionCount": 2,
+      "scenePalette": [
+        "#22313B",
+        "#FFC27A",
+        "#8FC0E0",
+        "#E8D5B7"
+      ]
+    },
+    {
+      "id": "7c2a9e41-3d58-4b6f-8a12-5e9d0c3b7f24",
+      "title": "雨天的中文旅游区",
+      "photoCount": 0,
+      "updatedAt": "2026-10-26T09:05:00Z",
+      "cover": {
+        "kind": "render",
+        "imageUrl": "/api/exhibitions/7c2a9e41-3d58-4b6f-8a12-5e9d0c3b7f24/cover",
+        "width": 1600,
+        "height": 900
+      },
+      "sceneStale": true,
+      "publication": null,
+      "hasUnpublishedChanges": false,
+      "pendingContributionCount": 0,
+      "scenePalette": []
+    }
+  ]
+}

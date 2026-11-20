@@ -1,0 +1,314 @@
+[
+  {
+    "service": "users",
+    "routeName": "register",
+    "requiresRequestBody": true,
+    "apiClass": "RegisterAPI"
+  },
+  {
+    "service": "users",
+    "routeName": "login",
+    "requiresRequestBody": true,
+    "apiClass": "LoginAPI"
+  },
+  {
+    "service": "users",
+    "routeName": "getcurrentuser",
+    "requiresRequestBody": false,
+    "apiClass": "GetCurrentUserAPI"
+  },
+  {
+    "service": "users",
+    "routeName": "logout",
+    "requiresRequestBody": false,
+    "apiClass": "LogoutAPI"
+  },
+  {
+    "service": "users",
+    "routeName": "getmyprofile",
+    "requiresRequestBody": false,
+    "apiClass": "GetMyProfileAPI"
+  },
+  {
+    "service": "users",
+    "routeName": "updatemyprofile",
+    "requiresRequestBody": true,
+    "apiClass": "UpdateMyProfileAPI"
+  },
+  {
+    "service": "users",
+    "routeName": "changepassword",
+    "requiresRequestBody": true,
+    "apiClass": "ChangePasswordAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "getauthorpage",
+    "requiresRequestBody": true,
+    "apiClass": "GetAuthorPageAPI"
+  },
+  {
+    "service": "curation",
+    "routeName": "getphotoinsights",
+    "requiresRequestBody": true,
+    "apiClass": "GetPhotoInsightsAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "listsceneruns",
+    "requiresRequestBody": true,
+    "apiClass": "ListSceneRunsAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "getscenerunbyid",
+    "requiresRequestBody": true,
+    "apiClass": "GetSceneRunByIdAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "restorescenerun",
+    "requiresRequestBody": true,
+    "apiClass": "RestoreSceneRunAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "createexhibition",
+    "requiresRequestBody": true,
+    "apiClass": "CreateExhibitionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "listmyexhibitions",
+    "requiresRequestBody": false,
+    "apiClass": "ListMyExhibitionsAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "getexhibition",
+    "requiresRequestBody": true,
+    "apiClass": "GetExhibitionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "updateexhibitionmeta",
+    "requiresRequestBody": true,
+    "apiClass": "UpdateExhibitionMetaAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "updatecuration",
+    "requiresRequestBody": true,
+    "apiClass": "UpdateCurationAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "deletephoto",
+    "requiresRequestBody": true,
+    "apiClass": "DeletePhotoAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "deleteexhibition",
+    "requiresRequestBody": true,
+    "apiClass": "DeleteExhibitionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "publish",
+    "requiresRequestBody": true,
+    "apiClass": "PublishAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "getpublishedexhibition",
+    "requiresRequestBody": true,
+    "apiClass": "GetPublishedExhibitionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "setcover",
+    "requiresRequestBody": true,
+    "apiClass": "SetCoverAPI"
+  },
+  {
+    "service": "curation",
+    "routeName": "suggestthemes",
+    "requiresRequestBody": true,
+    "apiClass": "SuggestThemesAPI"
+  },
+  {
+    "service": "curation",
+    "routeName": "refinecuration",
+    "requiresRequestBody": true,
+    "apiClass": "RefineCurationAPI"
+  },
+  {
+    "service": "curation",
+    "routeName": "getchathistory",
+    "requiresRequestBody": true,
+    "apiClass": "GetChatHistoryAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "generatescene",
+    "requiresRequestBody": true,
+    "apiClass": "GenerateSceneAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "getscenerun",
+    "requiresRequestBody": true,
+    "apiClass": "GetSceneRunAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "cancelscene",
+    "requiresRequestBody": true,
+    "apiClass": "CancelSceneAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "reviewscene",
+    "requiresRequestBody": true,
+    "apiClass": "ReviewSceneAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "getpublishedscene",
+    "requiresRequestBody": true,
+    "apiClass": "GetPublishedSceneAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "setphotolocation",
+    "requiresRequestBody": true,
+    "apiClass": "SetPhotoLocationAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "clearphotolocation",
+    "requiresRequestBody": true,
+    "apiClass": "ClearPhotoLocationAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "searchplaces",
+    "requiresRequestBody": true,
+    "apiClass": "SearchPlacesAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "createcontributioninvite",
+    "requiresRequestBody": true,
+    "apiClass": "CreateContributionInviteAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "getcontributionmanagement",
+    "requiresRequestBody": true,
+    "apiClass": "GetContributionManagementAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "closecontributioninvite",
+    "requiresRequestBody": true,
+    "apiClass": "CloseContributionInviteAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "getcontributioninvite",
+    "requiresRequestBody": true,
+    "apiClass": "GetContributionInviteAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "joincontribution",
+    "requiresRequestBody": true,
+    "apiClass": "JoinContributionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "revokecontributor",
+    "requiresRequestBody": true,
+    "apiClass": "RevokeContributorAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "listcontributions",
+    "requiresRequestBody": true,
+    "apiClass": "ListContributionsAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "updatecontribution",
+    "requiresRequestBody": true,
+    "apiClass": "UpdateContributionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "withdrawcontribution",
+    "requiresRequestBody": true,
+    "apiClass": "WithdrawContributionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "adoptcontribution",
+    "requiresRequestBody": true,
+    "apiClass": "AdoptContributionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "removememory",
+    "requiresRequestBody": true,
+    "apiClass": "RemoveMemoryAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "createcontribution",
+    "requiresRequestBody": true,
+    "apiClass": "CreateContributionAPI"
+  },
+  {
+    "service": "gallery",
+    "routeName": "declinecontribution",
+    "requiresRequestBody": true,
+    "apiClass": "DeclineContributionAPI"
+  },
+  {
+    "service": "curation",
+    "routeName": "suggestphotolocation",
+    "requiresRequestBody": true,
+    "apiClass": "SuggestPhotoLocationAPI"
+  },
+  {
+    "service": "curation",
+    "routeName": "getphotolocationcandidates",
+    "requiresRequestBody": true,
+    "apiClass": "GetPhotoLocationCandidatesAPI"
+  },
+  {
+    "service": "curation",
+    "routeName": "confirmphotolocationcandidate",
+    "requiresRequestBody": true,
+    "apiClass": "ConfirmPhotoLocationCandidateAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "revisescene",
+    "requiresRequestBody": true,
+    "apiClass": "ReviseSceneAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "acceptscenerun",
+    "requiresRequestBody": true,
+    "apiClass": "AcceptSceneRunAPI"
+  },
+  {
+    "service": "scene",
+    "routeName": "dismissscenerun",
+    "requiresRequestBody": true,
+    "apiClass": "DismissSceneRunAPI"
+  }
+]

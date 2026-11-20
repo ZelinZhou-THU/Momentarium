@@ -1,0 +1,106 @@
+{
+  "id": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+  "title": "雨中的济州",
+  "narrative": "把海边与街巷分作两章，留住这场雨。",
+  "updatedAt": "2026-10-26T13:00:00Z",
+  "groups": [
+    {
+      "id": "5d8e1f30-2a4b-4c6d-9e7f-8a1b2c3d4e5f",
+      "title": "海边的雨",
+      "narrative": "礁石与浪花，风车在远处。",
+      "position": 0,
+      "photos": [
+        {
+          "id": "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d",
+          "originalName": "sample-02-coast.jpg",
+          "mime": "image/jpeg",
+          "width": 2048,
+          "height": 1365,
+          "caption": "悬崖下的碧绿海水。",
+          "groupId": "5d8e1f30-2a4b-4c6d-9e7f-8a1b2c3d4e5f",
+          "positionInGroup": 0,
+          "contentUrl": "/api/photos/9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d/content?variant=full",
+          "thumbUrl": "/api/photos/9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d/content?variant=thumb",
+          "memories": []
+        },
+        {
+          "id": "1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d",
+          "originalName": "sample-05-coast.jpg",
+          "mime": "image/jpeg",
+          "width": 2048,
+          "height": 1365,
+          "caption": "防波堤上的红灯塔。",
+          "groupId": "5d8e1f30-2a4b-4c6d-9e7f-8a1b2c3d4e5f",
+          "positionInGroup": 1,
+          "contentUrl": "/api/photos/1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d/content?variant=full",
+          "thumbUrl": "/api/photos/1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d/content?variant=thumb",
+          "memories": []
+        }
+      ]
+    },
+    {
+      "id": "6e9f2031-3b5c-4d7e-8f90-9a1b2c3d4e5f",
+      "title": "街巷与咖啡",
+      "narrative": "雨后的街和一杯热咖啡。",
+      "position": 1,
+      "photos": [
+        {
+          "id": "2a3b4c5d-6e7f-4081-92a3-b4c5d6e7f809",
+          "originalName": "sample-08-street.jpg",
+          "mime": "image/jpeg",
+          "width": 2048,
+          "height": 1365,
+          "caption": "等车的人望着街对面。",
+          "groupId": "6e9f2031-3b5c-4d7e-8f90-9a1b2c3d4e5f",
+          "positionInGroup": 0,
+          "contentUrl": "/api/photos/2a3b4c5d-6e7f-4081-92a3-b4c5d6e7f809/content?variant=full",
+          "thumbUrl": "/api/photos/2a3b4c5d-6e7f-4081-92a3-b4c5d6e7f809/content?variant=thumb",
+          "memories": []
+        }
+      ]
+    }
+  ],
+  "ungroupedPhotos": [],
+  "locations": [
+    {
+      "photoId": "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d",
+      "source": "exif",
+      "status": "suggested",
+      "name": "",
+      "latitude": 33.4589,
+      "longitude": 126.9365,
+      "granularity": "hidden"
+    },
+    {
+      "photoId": "1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d",
+      "source": "manual",
+      "status": "confirmed",
+      "name": "济州岛 · 城山日出峰",
+      "latitude": 33.4587,
+      "longitude": 126.9422,
+      "granularity": "exact"
+    },
+    {
+      "photoId": "2a3b4c5d-6e7f-4081-92a3-b4c5d6e7f809",
+      "source": "manual",
+      "status": "confirmed",
+      "name": "济州市",
+      "latitude": null,
+      "longitude": null,
+      "granularity": "hidden"
+    }
+  ],
+  "sceneRun": null,
+  "sceneStale": true,
+  "cover": {
+    "kind": "auto",
+    "imageUrl": "/api/exhibitions/0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10/cover",
+    "width": 2048,
+    "height": 1365
+  },
+  "publication": null,
+  "hasUnpublishedChanges": false,
+  "pendingContributionCount": 0,
+  "scenePalette": [],
+  "currentSceneRun": null
+}

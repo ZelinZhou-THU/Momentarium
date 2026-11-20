@@ -1,0 +1,14 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "想做一个安静一点的济州记忆。",
+      "createdAt": "2026-10-26T12:00:00Z"
+    },
+    {
+      "role": "assistant",
+      "content": "可以试试以雨天和海岸为线索，把照片分成两章。",
+      "createdAt": "2026-10-26T12:00:18Z"
+    }
+  ]
+}

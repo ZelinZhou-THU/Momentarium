@@ -1,0 +1,28 @@
+{
+  "id": "6d7e8f9a-0b1c-4d2e-9f3a-4b5c6d7e8f90",
+  "exhibitionId": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+  "exhibitionTitle": "雨中的济州",
+  "contributor": {
+    "contributorId": "c1a2b3c4-d5e6-4f70-8a9b-0c1d2e3f4a5b",
+    "username": "island_walker",
+    "displayName": "海风"
+  },
+  "status": "declined",
+  "version": 2,
+  "memoryText": "回程那天雨停了，云缝里露出一小块蓝。",
+  "suggestedCaption": null,
+  "location": {
+    "name": "济州岛 · 城山日出峰",
+    "latitude": 33.4587,
+    "longitude": 126.9422,
+    "source": "manual"
+  },
+  "file": null,
+  "adoption": null,
+  "hasPendingUpdate": false,
+  "exhibitionPublished": false,
+  "memoryPublished": false,
+  "createdAt": "2026-11-03T02:30:00Z",
+  "updatedAt": "2026-11-03T06:00:00Z",
+  "withdrawnAt": null
+}

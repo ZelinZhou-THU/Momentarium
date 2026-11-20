@@ -1,0 +1,48 @@
+# 运行期数据（上传照片、日志）
+backend/data/
+*.log
+
+# 密钥
+.env
+.env.*
+!.env.example
+.envrc*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Scala / sbt
+target/
+backend/project/target/
+backend/project/project/
+.bsp/
+.metals/
+.bloop/
+.idea/
+
+# 前端
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# Python 浏览器测试的可重建缓存
+__pycache__/
+*.pyc
+
+# 本机录制、日志及原型输出
+docs/evidence/
+docs/design-review/
+prototypes/**/evidence/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# AI 编码工具会话产物（ZCode 计划目录等）
+.zcode/
+.claude/
+
+# 本机临时脚本、日志和历史产物归档
+.local/

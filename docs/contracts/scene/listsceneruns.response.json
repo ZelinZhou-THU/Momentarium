@@ -1,0 +1,82 @@
+{
+  "runs": [
+    {
+      "runId": "7d1e2f3a-4b5c-4d6e-8f90-a1b2c3d4e5f6",
+      "status": "succeeded",
+      "source": "ai",
+      "attempts": 2,
+      "hint": "雾更浓一点",
+      "mood": "雾中的眷恋",
+      "scores": {
+        "moodMatch": 4,
+        "photoPresence": 3,
+        "composition": 4,
+        "lightingColor": 4,
+        "completeness": 3
+      },
+      "weightedScore": 3.65,
+      "reviewSummary": "整体成立，前景略空。",
+      "errorMessage": null,
+      "restoredFrom": "4c7e2b91-6a3d-4f58-9c1e-7d2a5b8f0e34",
+      "isCurrent": true,
+      "matchesCurrentDraft": true,
+      "restorable": true,
+      "createdAt": "2026-10-31T08:10:00Z",
+      "kind": "restore",
+      "parentRunId": null,
+      "revisionInstruction": null,
+      "acceptable": false,
+      "dismissed": false
+    },
+    {
+      "runId": "3b4c5d6e-7f80-4a91-8b2c-3d4e5f6a7b8c",
+      "status": "succeeded",
+      "source": "ai",
+      "attempts": 1,
+      "hint": null,
+      "mood": "雾中的眷恋",
+      "scores": {
+        "moodMatch": 4,
+        "photoPresence": 4,
+        "composition": 4,
+        "lightingColor": 4,
+        "completeness": 4
+      },
+      "weightedScore": 4,
+      "reviewSummary": "修订后灯塔比例更协调。",
+      "errorMessage": null,
+      "restoredFrom": null,
+      "isCurrent": false,
+      "matchesCurrentDraft": true,
+      "restorable": false,
+      "createdAt": "2026-10-31T08:20:00Z",
+      "kind": "revise",
+      "parentRunId": "7d1e2f3a-4b5c-4d6e-8f90-a1b2c3d4e5f6",
+      "revisionInstruction": "把灯塔缩小一些，光线改成黄昏。",
+      "acceptable": true,
+      "dismissed": false
+    },
+    {
+      "runId": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+      "status": "failed",
+      "source": null,
+      "attempts": 0,
+      "hint": null,
+      "mood": null,
+      "scores": null,
+      "weightedScore": null,
+      "reviewSummary": null,
+      "errorMessage": "模型连接中断",
+      "restoredFrom": null,
+      "isCurrent": false,
+      "matchesCurrentDraft": false,
+      "restorable": false,
+      "createdAt": "2026-10-31T08:00:00Z",
+      "kind": "generate",
+      "parentRunId": null,
+      "revisionInstruction": null,
+      "acceptable": false,
+      "dismissed": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+// 组合：山间木屋的清晨（terrain + trees + cottage + water 当山间湖）。
+scene.fog = new THREE.FogExp2(0xc9d2cc, 0.02);
+scene.add(makeSkyDome(THREE, { top: 0x6a8fb0, horizon: 0xf0d9b5 }));
+addLightRig(THREE, scene, { keyColor: 0xffe0b0, keyPosition: [-9, 6, 4], ambientColor: 0x9fb2b8 });
+const glowTexture = makeGlowTexture(THREE);
+scene.add(makeLowPolyTerrain(THREE, { flatRadius: 11, height: 9 }));
+const lake = makeReadableWater(THREE, { width: 16, depth: 9, color: 0x4f6f74, waveScale: 0.12, rippleStrength: 0.2, foam: false });
+lake.group.position.set(-4, 0.05, -4);
+scene.add(lake.group);
+const house = makeCottage(THREE, glowTexture, { wallColor: 0x8c7a62, roofColor: 0x4a3f3a, withRailing: false });
+house.position.set(3.5, 0, -1.5);
+house.rotation.y = -0.6;
+scene.add(house);
+scene.add(makeForest(THREE, { center: [7, 0, -6], count: 14, spread: 7, avoid: [[3.5, -1.5, 3.2], [-4, -4, 6]] }));
+scene.add(makeForest(THREE, { center: [-10, 0, -9], count: 10, spread: 6, seed: 8, avoid: [[-4, -4, 6]] }));
+scene.add(makeRockCluster(THREE, { center: [-1.5, 0, 3], count: 4, size: 0.7 }));
+camera.fov = 52; camera.position.set(0, 2.0, 10); camera.lookAt(0, 1.6, -3); camera.updateProjectionMatrix();
+let elapsed = 0;
+ctx.onFrame((delta) => { elapsed += delta; lake.update(elapsed, ctx.renderer, scene); });
+ctx.addOrbitControls({ target: [0, 1.6, -3], minDistance: 5, maxDistance: 25 });

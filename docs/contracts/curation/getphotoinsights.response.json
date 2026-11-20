@@ -1,0 +1,24 @@
+{
+  "analyses": [
+    {
+      "photoId": "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d",
+      "analysis": {
+        "description": "雨后的窗边，玻璃上挂着水珠，远处是模糊的路灯。",
+        "mood": "安静的等待",
+        "palette": [
+          "#2B3A4A",
+          "#C8A26B"
+        ],
+        "memoryCues": [
+          "雨声",
+          "旧窗框"
+        ],
+        "sensory": "潮湿、微凉",
+        "suggestedCaption": "雨停之前，我们都没有说话。"
+      },
+      "model": "deepseek-v4.1-flash",
+      "analyzedAt": "2026-10-31T08:00:00Z"
+    }
+  ],
+  "latestBrief": null
+}

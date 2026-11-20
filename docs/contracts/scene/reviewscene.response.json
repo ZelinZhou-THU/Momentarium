@@ -1,0 +1,51 @@
+{
+  "runId": "4c7e2b91-6a3d-4f58-9c1e-7d2a5b8f0e34",
+  "exhibitionId": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+  "status": "succeeded",
+  "source": "ai",
+  "attempts": 2,
+  "hint": "雨天的海岸，安静一些",
+  "photoIds": [
+    "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d",
+    "1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d",
+    "2a3b4c5d-6e7f-4081-92a3-b4c5d6e7f809"
+  ],
+  "curationVersion": 3,
+  "brief": {
+    "mood": "雨天的安静",
+    "memoryReading": "潮湿的街与远处的风车。",
+    "scenePrompt": "低多边形海边房间，照片环绕发光平面，冷色环境光。",
+    "entranceNarration": "雨还在下，海在远处。",
+    "palette": [
+      "#6F685E",
+      "#E4DDD1",
+      "#8C5A3B"
+    ],
+    "avoid": [
+      "逐块独立的几何体"
+    ],
+    "userHint": "雨天的海岸，安静一些"
+  },
+  "code": "function build(ctx) {\n  const { THREE, scene, textures, photoIds } = ctx;\n  const photo = new THREE.Mesh(new THREE.PlaneGeometry(2, 1.4), new THREE.MeshBasicMaterial({ map: textures[1] }));\n  photo.position.set(0, 1, -3);\n  scene.add(photo);\n  return { photoIdsUsed: [photoIds[0], photoIds[1], photoIds[2]] };\n}",
+  "review": {
+    "scores": {
+      "moodMatch": 5,
+      "photoPresence": 5,
+      "composition": 4,
+      "lightingColor": 5,
+      "completeness": 4
+    },
+    "verdict": "pass",
+    "issues": [],
+    "summary": "照片全部出现，冷色环境光与雨天氛围一致。"
+  },
+  "errorCode": null,
+  "errorMessage": null,
+  "createdAt": "2026-10-26T13:03:00Z",
+  "updatedAt": "2026-10-26T14:03:00Z",
+  "kind": "generate",
+  "isCurrent": true,
+  "revisionInstruction": null,
+  "parentRunId": null,
+  "dismissed": false
+}

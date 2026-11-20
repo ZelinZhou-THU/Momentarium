@@ -1,0 +1,42 @@
+{
+  "proposals": [
+    {
+      "name": "雨中的海岸与街巷",
+      "concept": "把济州岛的雨天记忆收成两章：先是海与礁石，再是湿漉漉的街巷。",
+      "groups": [
+        {
+          "title": "海边的雨",
+          "photoIds": [
+            "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d",
+            "1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d"
+          ]
+        },
+        {
+          "title": "雨后街巷",
+          "photoIds": [
+            "2a3b4c5d-6e7f-4081-92a3-b4c5d6e7f809"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "看得见海的房间",
+      "concept": "以窗与海岸为线索，把旅途里安静的时刻放在一起。",
+      "groups": [
+        {
+          "title": "窗外的海",
+          "photoIds": [
+            "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d"
+          ]
+        },
+        {
+          "title": "街角与咖啡",
+          "photoIds": [
+            "1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d",
+            "2a3b4c5d-6e7f-4081-92a3-b4c5d6e7f809"
+          ]
+        }
+      ]
+    }
+  ]
+}

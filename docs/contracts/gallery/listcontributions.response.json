@@ -1,0 +1,89 @@
+{
+  "contributions": [
+    {
+      "id": "5c6d7e8f-9a0b-4c1d-8e2f-3a4b5c6d7e8f",
+      "exhibitionId": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+      "exhibitionTitle": "雨中的济州",
+      "contributor": {
+        "contributorId": "c1a2b3c4-d5e6-4f70-8a9b-0c1d2e3f4a5b",
+        "username": "island_walker",
+        "displayName": "海风"
+      },
+      "status": "submitted",
+      "version": 1,
+      "memoryText": "那天的海风很大，我们把伞收起来走了很久。",
+      "suggestedCaption": "海风很大的一天",
+      "location": {
+        "name": "济州岛 · 涯月邑",
+        "latitude": 33.4632,
+        "longitude": 126.3175,
+        "source": "manual"
+      },
+      "file": {
+        "mime": "image/jpeg",
+        "width": 2048,
+        "height": 1365,
+        "contentUrl": "/api/contributions/5c6d7e8f-9a0b-4c1d-8e2f-3a4b5c6d7e8f/content?variant=full",
+        "thumbUrl": "/api/contributions/5c6d7e8f-9a0b-4c1d-8e2f-3a4b5c6d7e8f/content?variant=thumb"
+      },
+      "adoption": {
+        "contributionId": "5c6d7e8f-9a0b-4c1d-8e2f-3a4b5c6d7e8f",
+        "photoId": "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d",
+        "memoryId": "8f9a0b1c-2d3e-4f5a-9b6c-7d8e9f0a1b2c",
+        "adoptedVersion": 1
+      },
+      "hasPendingUpdate": false,
+      "exhibitionPublished": true,
+      "memoryPublished": true,
+      "createdAt": "2026-11-03T02:00:00Z",
+      "updatedAt": "2026-11-03T02:05:00Z",
+      "withdrawnAt": null
+    },
+    {
+      "id": "6d7e8f9a-0b1c-4d2e-9f3a-4b5c6d7e8f90",
+      "exhibitionId": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+      "exhibitionTitle": "雨中的济州",
+      "contributor": {
+        "contributorId": "c1a2b3c4-d5e6-4f70-8a9b-0c1d2e3f4a5b",
+        "username": "island_walker",
+        "displayName": "海风"
+      },
+      "status": "draft",
+      "version": 1,
+      "memoryText": "",
+      "suggestedCaption": null,
+      "location": null,
+      "file": null,
+      "adoption": null,
+      "hasPendingUpdate": false,
+      "exhibitionPublished": true,
+      "memoryPublished": false,
+      "createdAt": "2026-11-03T02:30:00Z",
+      "updatedAt": "2026-11-03T02:30:00Z",
+      "withdrawnAt": null
+    },
+    {
+      "id": "7f8a9b0c-1d2e-4f3a-8b4c-5d6e7f8a9b0c",
+      "exhibitionId": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+      "exhibitionTitle": "雨中的济州",
+      "contributor": {
+        "contributorId": "c1a2b3c4-d5e6-4f70-8a9b-0c1d2e3f4a5b",
+        "username": "island_walker",
+        "displayName": "海风"
+      },
+      "status": "declined",
+      "version": 2,
+      "memoryText": "潮声退去以后，我们在灯塔下坐到天黑。",
+      "suggestedCaption": "潮声退去以后，灯塔下坐到天黑。",
+      "location": null,
+      "file": null,
+      "adoption": null,
+      "hasPendingUpdate": false,
+      "exhibitionPublished": true,
+      "memoryPublished": false,
+      "createdAt": "2026-11-03T05:00:00Z",
+      "updatedAt": "2026-11-03T06:00:00Z",
+      "withdrawnAt": null
+    }
+  ]
+}

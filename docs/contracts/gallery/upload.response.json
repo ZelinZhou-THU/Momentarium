@@ -1,0 +1,23 @@
+{
+  "photos": [
+    {
+      "id": "3b4c5d6e-7f80-4912-a3b4-c5d6e7f8091a",
+      "originalName": "sample-01-coast.jpg",
+      "mime": "image/jpeg",
+      "width": 2048,
+      "height": 1365,
+      "caption": "",
+      "groupId": null,
+      "positionInGroup": null,
+      "contentUrl": "/api/photos/3b4c5d6e-7f80-4912-a3b4-c5d6e7f8091a/content?variant=full",
+      "thumbUrl": "/api/photos/3b4c5d6e-7f80-4912-a3b4-c5d6e7f8091a/content?variant=thumb",
+      "memories": []
+    }
+  ],
+  "failures": [
+    {
+      "fileName": "IMG_0001.heic",
+      "reason": "UPLOAD_UNSUPPORTED_TYPE"
+    }
+  ]
+}

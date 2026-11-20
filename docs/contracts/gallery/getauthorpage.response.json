@@ -1,0 +1,46 @@
+{
+  "username": "memory_curator",
+  "displayName": "林间拾光",
+  "bio": "喜欢在雨天和海边拍照。",
+  "exhibitions": [
+    {
+      "id": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+      "title": "雨中的济州",
+      "narration": "推开门，雨声和海风一起涌进来。",
+      "cover": {
+        "kind": "auto",
+        "imageUrl": "/api/exhibitions/0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10/cover",
+        "width": 2048,
+        "height": 1365
+      },
+      "version": 2,
+      "publishedAt": "2026-10-26T15:00:00Z",
+      "scenePalette": [
+        "#22313B",
+        "#FFC27A",
+        "#8FC0E0",
+        "#E8D5B7"
+      ]
+    }
+  ],
+  "journeyLocations": [
+    {
+      "exhibitionId": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+      "exhibitionTitle": "雨中的济州",
+      "photoId": "9a1b2c3d-4e5f-4a6b-8c7d-1e2f3a4b5c6d",
+      "name": "济州岛 · 涉地可支",
+      "latitude": 33.4592,
+      "longitude": 126.936,
+      "granularity": "area"
+    },
+    {
+      "exhibitionId": "0b6f3c1e-7f2a-4a34-9be1-2f6d5c8a9d10",
+      "exhibitionTitle": "雨中的济州",
+      "photoId": "1f2e3d4c-5b6a-4978-8d6c-5e4f3a2b1c0d",
+      "name": "济州岛 · 城山日出峰",
+      "latitude": 33.4587,
+      "longitude": 126.9422,
+      "granularity": "exact"
+    }
+  ]
+}
