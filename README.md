@@ -2,15 +2,15 @@
 
 **Give your photos a place to live.**
 
-What if a photo album opened onto a foggy coast? You could orbit the shoreline, open a chapter, and discover the memories behind the photographs.
+What if a photo album opened onto a hillside cabin? You could circle the cabin, open a chapter, and discover the memories behind the photographs.
 
 Momentarium turns photo collections into interactive 3D exhibitions. Curate the story with AI assistance, invite others to add their photos and memories, and share the finished exhibition through a link anyone can open.
 
 [Try the local demo](#run-locally) · [See how it's built](#architecture) · [Run the tests](#tests)
 
-![The published Momentarium exhibition, with a foggy 3D coast and a sidebar of photo chapters](docs/media/public-exhibition.webp)
+![The published Momentarium exhibition, with a wooden cabin on a 3D hillside and a sidebar of photo chapters](docs/media/public-exhibition.webp)
 
-*The sample exhibition pairs a foggy 3D coast with photo chapters. The demo uses synthetic photos and a Chinese-language interface.*
+*A previously AI-generated scene rendered in the public viewer with synthetic photos and the Chinese-language interface. The local quickstart uses a bundled scene.*
 
 ## From camera roll to opening day
 
