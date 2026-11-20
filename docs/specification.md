@@ -63,7 +63,7 @@
 - 沿用 v0.3 的核心决策：三维场景**自由生成可运行代码 + 沙箱渲染 + 主观（VLM）验收 + 硬门禁 + 兜底工件**；放弃原型库/参数化 DSL。
 - 交付目标：7 个日历日内完成可演示、可验收的端到端闭环
 - 本文件位置：`docs/specification.md`；实现与契约变更时同步更新（契约先行）
-- 相关依据：`AGENTS.md`、`rules.md`（60 条工程结构规则）、`docs/scene-prompt-spec.md`
+- 相关文档：[API 契约](api-contract.md)、[场景生成规范](scene-prompt-spec.md)
 
 ---
 
@@ -1183,7 +1183,7 @@ data/            # 上传文件，gitignore
 
 | 编号 | 决策 | 理由 |
 |---|---|---|
-| DR-1 | 不使用课程脚手架，按 rules.md 自建 | 课程未提供模板；结构本身是交付物的一部分 |
+| DR-1 | 后端按业务服务组织，服务之间通过公开 API 消息和封装的 Table 方法协作 | 明确各服务的职责和调用边界 |
 | DR-2 | 三维场景产物是**可运行代码**（`build(ctx)` 函数），自由生成；宿主提供沙箱运行时 | 用户明确要求自由，不做原型库约束；可运行代码是唯一能表达任意空间与光效的产物 |
 | DR-3 | PostgreSQL 16+（本机 18 可用），每服务一个 schema，HikariCP + 类型化 JDBC；不引入 ORM/doobie；**不强制 Docker** | `plan(connection)` 的连接模型与 ORM/Transactor 生命周期冲突；Docker 只是启动方式之一 |
 | DR-4 | 发布快照单源 `gallery.publications`；场景产物单源 `scene`；公开场景 API 通过 active 快照的 `sceneRunId` 取代码 | 避免状态漂移；公开读取只信 active 快照 |
